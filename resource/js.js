@@ -367,8 +367,8 @@ var playMusicApp = {
     const cdBoxWidth = cdBox.offsetWidth;
     const songBox = $('.playlist')
     songBox.onscroll = () => {
-      var newCdWidth = (cdBoxWidth - songBox.scrollTop) > 0 ? (cdBoxWidth - songBox.scrollTop) : 0;
-      if (newCdWidth >= 100) {
+      var newCdWidth = (cdBoxWidth - songBox.scrollTop) > 0 ? (cdBoxWidth - songBox.scrollTop / 2) : 0;
+      if (newCdWidth >= 130) {
         cdBox.style.width = newCdWidth + 'px';
         // cdBox.style.opacity = newCdWidth * 2 / cdBoxWidth;
         cdBox.style.transform = `translateY(-${(32 - newCdWidth * 32 / cdBoxWidth)}px)`
